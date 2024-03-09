@@ -2,7 +2,6 @@ import React from "react";
 import { View, StyleSheet, ScrollView, Platform } from "react-native";
 import Header from '../../components/Header';
 import CadastrarCard from '../../components/Cadastrar';
-import BottomBar from '../../components/bottombar';
 import Card from '../../components/Card';
 import { StatusBar } from "expo-status-bar";
 
@@ -24,7 +23,6 @@ export default function Home() {
         </View>
       </ScrollView>
       <StatusBar style="light" barStyle="light-content" />
-      <BottomBar />
     </View>
   );
 }

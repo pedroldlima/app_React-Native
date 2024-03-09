@@ -15,11 +15,6 @@ export default function Header() {
                         <Text style={styles.subtitle}>Shopping Flamboyant</Text>
                     </View>
 
-                    <View style={styles.rightContainer}>
-                        <TouchableOpacity style={styles.persona}>
-                            <MaterialIcons name="account-circle" size={32} color="white" />
-                        </TouchableOpacity>
-                    </View>
                 </View>
 
                 <View style={styles.searchContainer}>

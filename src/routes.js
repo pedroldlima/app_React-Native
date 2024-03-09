@@ -1,5 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
+
+import Profile from "../pages/Profile/Profile";
 import Home from "../pages/Home/Home";
 import Bombeiro from "../pages/Bombeiro/Bombeiro";
 
@@ -11,13 +13,14 @@ function Routes() {
     return (
         <Tab.Navigator
             screenOptions={{
+                tabBarActiveTintColor: 'white',
                 tabBarStyle: false,
                 tabBarStyle: {
                     position: 'absolute',
                     backgroundColor: '#DE3333',
                     borderTopWidth: 0,
 
-                    height: 60,
+                    height: 65,
                     padding: 10,
                     borderTopLeftRadius: 30,
                     borderTopRightRadius: 30,
@@ -55,6 +58,20 @@ function Routes() {
                     
                 }} 
             />
+             <Tab.Screen
+            name="Perfil"
+            component={Profile}
+            options={{
+               
+                tabBarIcon: ({color, size, focused}) => {
+                    if(focused){
+                    return <Ionicons name="person" size={size} color={color} />
+                    }
+                    return <Ionicons name="person-outline" size={size} color={color}/>
+                }
+                
+            }} 
+        />
         </Tab.Navigator>
     )
 }
